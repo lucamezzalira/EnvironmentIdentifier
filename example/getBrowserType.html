@@ -10,25 +10,25 @@
   <script type="text/javascript">
 
     function init(){
-      var bi = new EnvironmentIdentifier();
+      var ei = new EnvironmentIdentifier();
       var cont = document.getElementById("resultContainer");
-      var res = analyseBrowser(bi);
+      var res = analyseBrowser(ei);
       cont.innerHTML = res;
     }
 
-    function analyseBrowser(browserIdentifier){
-      var analysis = "isWindows: " + browserIdentifier.isWindows() + "<br/>"
-                    + "isWindowsPhone: " + browserIdentifier.isWindowsPhone() + "<br/>"
-                    + "isMac: " + browserIdentifier.isMac() + "<br/>"
-                    + "isAndroid: " + browserIdentifier.isAndroid() + "<br/>"
-                    + "isIOS: " + browserIdentifier.isIOS() + "<br/>"
-                    + "isTablet: " + browserIdentifier.isTablet() + "<br/>"
-                    + "isSmartphone: " + browserIdentifier.isSmartphone() + "<br/>"
-                    + "isSafari: " + browserIdentifier.isSafariForIOS() + "<br/>"
-                    + "isInternetExplorer: " + browserIdentifier.isInternetExplorerMobile() + "<br/>"
-                    + "isStockBrowser: " + browserIdentifier.isStockBrowser() + "<br/>"
-                    + "isChromeForAndroid: " + browserIdentifier.isChromeForAndroid() + "<br/>"
-                    + "isChromeForIOS: " + browserIdentifier.isChromeForIOS() + "<br/>";
+    function analyseBrowser(envIdentifier){
+      var analysis = "isWindows: " + envIdentifier.isWindows() + "<br/>"
+                    + "isWindowsPhone: " + envIdentifier.isWindowsPhone() + "<br/>"
+                    + "isMac: " + envIdentifier.isMac() + "<br/>"
+                    + "isAndroid: " + envIdentifier.isAndroid() + "<br/>"
+                    + "isIOS: " + envIdentifier.isIOS() + "<br/>"
+                    + "isTablet: " + envIdentifier.isTablet() + "<br/>"
+                    + "isSmartphone: " + envIdentifier.isSmartphone() + "<br/>"
+                    + "isSafari: " + envIdentifier.isSafariForIOS() + "<br/>"
+                    + "isInternetExplorer: " + envIdentifier.isInternetExplorerMobile() + "<br/>"
+                    + "isStockBrowser: " + envIdentifier.isStockBrowser() + "<br/>"
+                    + "isChromeForAndroid: " + envIdentifier.isChromeForAndroid() + "<br/>"
+                    + "isChromeForIOS: " + envIdentifier.isChromeForIOS() + "<br/>";
       return analysis;
     }
 
