@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<!-- Based on HTML5 Bones | http://html5bones.com -->
+
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Browser identification</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script type="text/javascript" src="./BrowserIdentifier.js"></script>
+  <script type="text/javascript">
+
+    function init(){
+      var bi = new BrowserIdentifier();
+      var cont = document.getElementById("resultContainer");
+      var res = analyseBrowser(bi);
+      cont.innerHTML = res;
+    }
+
+    function analyseBrowser(browserIdentifier){
+      var analysis = "isWindows: " + browserIdentifier.isWindows() + "<br/>"
+                    + "isWindowsPhone: " + browserIdentifier.isWindowsPhone() + "<br/>"
+                    + "isMac: " + browserIdentifier.isMac() + "<br/>"
+                    + "isAndroid: " + browserIdentifier.isAndroid() + "<br/>"
+                    + "isIOS: " + browserIdentifier.isIOS() + "<br/>"
+                    + "isTablet: " + browserIdentifier.isTablet() + "<br/>"
+                    + "isSmartphone: " + browserIdentifier.isSmartphone() + "<br/>"
+                    + "isSafari: " + browserIdentifier.isSafariForIOS() + "<br/>"
+                    + "isInternetExplorer: " + browserIdentifier.isInternetExplorerMobile() + "<br/>"
+                    + "isStockBrowser: " + browserIdentifier.isStockBrowser() + "<br/>"
+                    + "isChromeForAndroid: " + browserIdentifier.isChromeForAndroid() + "<br/>"
+                    + "isChromeForIOS: " + browserIdentifier.isChromeForIOS() + "<br/>";
+      return analysis;
+    }
+
+  </script>
+</head>
+
+  <body onload="init()">
+    <div id="resultContainer">
+    </div>
+  </body>
+
+</html>
