@@ -4,7 +4,7 @@ export default class BrowserRegEx {
   }
 
   static get CHROME_ANDROID(){
-    return "(?=.*chrome)(?=.*android)";
+    return "(?=.*chrome|chromium)(?=.*android)";
   }
 
   static get SAFARI(){
@@ -20,11 +20,11 @@ export default class BrowserRegEx {
   }
 
   static get TABLET(){
-    return "ipad|safari/";
+    return "ipad|(?=.*android)(?!mobile)";
   }
 
   static get IOS(){
-    return "ipad|iphone";
+    return "ipad|iphone|ipod";
   }
 
   static get ANDROID(){

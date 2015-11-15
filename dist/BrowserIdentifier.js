@@ -121,7 +121,7 @@ var BrowserRegEx = (function () {
   }, {
     key: "CHROME_ANDROID",
     get: function get() {
-      return "(?=.*chrome)(?=.*android)";
+      return "(?=.*chrome|chromium)(?=.*android)";
     }
   }, {
     key: "SAFARI",
@@ -141,12 +141,12 @@ var BrowserRegEx = (function () {
   }, {
     key: "TABLET",
     get: function get() {
-      return "ipad|safari/";
+      return "ipad|(?=.*android)(?!mobile)";
     }
   }, {
     key: "IOS",
     get: function get() {
-      return "ipad|iphone";
+      return "ipad|iphone|ipod";
     }
   }, {
     key: "ANDROID",
