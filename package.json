@@ -1,8 +1,8 @@
 {
-  "name": "device-identifier",
+  "name": "EnvironmentIdentifier",
   "version": "1.0.0",
-  "description": "",
-  "main": "src/BrowserIdentifier.js",
+  "description": "utility library for identifying in which browser and device your Javascript code is running",
+  "main": "src/EnvironmentIdentifier.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
