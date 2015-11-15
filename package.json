@@ -1,5 +1,5 @@
 {
-  "name": "EnvironmentIdentifier",
+  "name": "environment-identifier",
   "version": "1.0.0",
   "description": "utility library for identifying in which browser and device your Javascript code is running",
   "main": "src/EnvironmentIdentifier.js",
