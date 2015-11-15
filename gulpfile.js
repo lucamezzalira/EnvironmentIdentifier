@@ -5,13 +5,13 @@ var source = require('vinyl-source-stream');
 
 gulp.task('build', function () {
   browserify({
-    entries: 'src/BrowserIdentifier.js',
+    entries: 'src/EnvironmentIdentifier.js',
     extensions: ['.js'],
     debug: false
   })
   .transform(babelify)
   .bundle()
-  .pipe(source('BrowserIdentifier.js'))
+  .pipe(source('EnvironmentIdentifier.js'))
   .pipe(gulp.dest('dist'));
 });
 

@@ -1,4 +1,4 @@
-export default class BrowserRegEx {
+export default class EnvironmentRegEx {
   static get CHROME_IOS(){
     return "(?=.*chrios)(?=.*iphone)(?=.*ipad).*";
   }

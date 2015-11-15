@@ -4,8 +4,7 @@
   "description": "",
   "main": "src/BrowserIdentifier.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "publish": "babel src --out-file dist/DeviceIdentifier.js"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",

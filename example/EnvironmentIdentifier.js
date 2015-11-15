@@ -6,98 +6,97 @@ var _createClass = (function () { function defineProperties(target, props) { for
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.BrowserIdentifier = undefined;
+exports.EnvironmentIdentifier = undefined;
 
-var _BrowserRegEx = require("./BrowserRegEx");
+var _EnvironmentRegEx = require("./EnvironmentRegEx");
 
-var _BrowserRegEx2 = _interopRequireDefault(_BrowserRegEx);
+var _EnvironmentRegEx2 = _interopRequireDefault(_EnvironmentRegEx);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-var BrowserIdentifier = exports.BrowserIdentifier = (function () {
-  function BrowserIdentifier() {
-    _classCallCheck(this, BrowserIdentifier);
+var EnvironmentIdentifier = exports.EnvironmentIdentifier = (function () {
+  function EnvironmentIdentifier() {
+    _classCallCheck(this, EnvironmentIdentifier);
 
     this.userAgent = window.navigator.userAgent.toLowerCase();
   }
 
-  _createClass(BrowserIdentifier, [{
+  _createClass(EnvironmentIdentifier, [{
     key: "isChromeForAndroid",
     value: function isChromeForAndroid() {
-      return this._checkWithRegEx(_BrowserRegEx2.default.CHROME_ANDROID, this.userAgent);
+      return this._checkWithRegEx(_EnvironmentRegEx2.default.CHROME_ANDROID, this.userAgent);
     }
   }, {
     key: "isChromeForIOS",
     value: function isChromeForIOS() {
-      return this._checkWithRegEx(_BrowserRegEx2.default.CHROME_IOS, this.userAgent);
+      return this._checkWithRegEx(_EnvironmentRegEx2.default.CHROME_IOS, this.userAgent);
     }
   }, {
     key: "isSafariForIOS",
     value: function isSafariForIOS() {
-      return this._checkWithRegEx(_BrowserRegEx2.default.SAFARI, this.userAgent);
+      return this._checkWithRegEx(_EnvironmentRegEx2.default.SAFARI, this.userAgent);
     }
   }, {
     key: "isStockBrowser",
     value: function isStockBrowser() {
-      return this._checkWithRegEx(_BrowserRegEx2.default.STOCK_BROWSER, this.userAgent);
+      return this._checkWithRegEx(_EnvironmentRegEx2.default.STOCK_BROWSER, this.userAgent);
     }
   }, {
     key: "isInternetExplorerMobile",
     value: function isInternetExplorerMobile() {
-      return this._checkWithRegEx(_BrowserRegEx2.default.IE, this.userAgent);
+      return this._checkWithRegEx(_EnvironmentRegEx2.default.IE, this.userAgent);
     }
   }, {
     key: "isTablet",
     value: function isTablet() {
-      return this._checkWithRegEx(_BrowserRegEx2.default.TABLET, this.userAgent);
+      return this._checkWithRegEx(_EnvironmentRegEx2.default.TABLET, this.userAgent);
     }
   }, {
     key: "isSmartphone",
     value: function isSmartphone() {
-      return this._checkWithRegEx(_BrowserRegEx2.default.SMARTPHONE, this.userAgent);
+      return this._checkWithRegEx(_EnvironmentRegEx2.default.SMARTPHONE, this.userAgent);
     }
   }, {
     key: "isIOS",
     value: function isIOS() {
-      return this._checkWithRegEx(_BrowserRegEx2.default.IOS, this.userAgent);
+      return this._checkWithRegEx(_EnvironmentRegEx2.default.IOS, this.userAgent);
     }
   }, {
     key: "isAndroid",
     value: function isAndroid() {
-      return this._checkWithRegEx(_BrowserRegEx2.default.ANDROID, this.userAgent);
+      return this._checkWithRegEx(_EnvironmentRegEx2.default.ANDROID, this.userAgent);
     }
   }, {
     key: "isMac",
     value: function isMac() {
-      return this._checkWithRegEx(_BrowserRegEx2.default.MAC, this.userAgent);
+      return this._checkWithRegEx(_EnvironmentRegEx2.default.MAC, this.userAgent);
     }
   }, {
     key: "isWindows",
     value: function isWindows() {
-      return this._checkWithRegEx(_BrowserRegEx2.default.WINDOWS, this.userAgent);
+      return this._checkWithRegEx(_EnvironmentRegEx2.default.WINDOWS, this.userAgent);
     }
   }, {
     key: "isWindowsPhone",
     value: function isWindowsPhone() {
-      return this._checkWithRegEx(_BrowserRegEx2.default.WINDOWS_PHONE, this.userAgent);
+      return this._checkWithRegEx(_EnvironmentRegEx2.default.WINDOWS_PHONE, this.userAgent);
     }
   }, {
     key: "_checkWithRegEx",
     value: function _checkWithRegEx(regex, str) {
-      console.log(str);
       var re = new RegExp(regex, "i");
       return re.test(str);
     }
   }]);
 
-  return BrowserIdentifier;
+  return EnvironmentIdentifier;
 })();
 
-if (window) window.BrowserIdentifier = BrowserIdentifier;
+if (window) window.EnvironmentIdentifier = EnvironmentIdentifier;
 
-},{"./BrowserRegEx":2}],2:[function(require,module,exports){
+},{"./EnvironmentRegEx":2}],2:[function(require,module,exports){
 "use strict";
 
 var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
@@ -108,12 +107,12 @@ Object.defineProperty(exports, "__esModule", {
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-var BrowserRegEx = (function () {
-  function BrowserRegEx() {
-    _classCallCheck(this, BrowserRegEx);
+var EnvironmentRegEx = (function () {
+  function EnvironmentRegEx() {
+    _classCallCheck(this, EnvironmentRegEx);
   }
 
-  _createClass(BrowserRegEx, null, [{
+  _createClass(EnvironmentRegEx, null, [{
     key: "CHROME_IOS",
     get: function get() {
       return "(?=.*chrios)(?=.*iphone)(?=.*ipad).*";
@@ -175,9 +174,9 @@ var BrowserRegEx = (function () {
     }
   }]);
 
-  return BrowserRegEx;
+  return EnvironmentRegEx;
 })();
 
-exports.default = BrowserRegEx;
+exports.default = EnvironmentRegEx;
 
 },{}]},{},[1]);
