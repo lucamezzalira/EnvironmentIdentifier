@@ -1,7 +1,28 @@
 # EnvironmentIdentifier
-utility library for retrieving in which browser and device your code is running
+utility library for retrieving in which browser and device your javascript application is running
 
-#Example
+# APIs
+EnvironmentIdentifier has the following APIs, all the parameters _return a boolean value_:
+
+**Browsers related**
+
+_isChromeForAndroid()_  
+_isChromeForIOS()_  
+_isSafariForIOS()_  
+_isStockBrowser()_  
+_isInternetExplorerMobile()_
+
+**Devices related**  
+
+_isTablet()_  
+_isSmartphone()_  
+_isIOS()_  
+_isAndroid()_  
+_isMac()_  
+_isWindows()_    
+_isWindowsPhone()_    
+
+# Example
 ```
 var envIdentifier = new EnvironmentIdentifier();
 
@@ -17,7 +38,7 @@ var analysis = "isWindows: " + envIdentifier.isWindows() + "<br/>"
                     + "isStockBrowser: " + envIdentifier.isStockBrowser() + "<br/>"
                     + "isChromeForAndroid: " + envIdentifier.isChromeForAndroid() + "<br/>"
                     + "isChromeForIOS: " + envIdentifier.isChromeForIOS() + "<br/>";
-                    
+
 body.innerHTML = analysis;
 ```
 
